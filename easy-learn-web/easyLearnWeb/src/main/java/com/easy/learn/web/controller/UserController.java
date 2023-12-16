@@ -1,6 +1,7 @@
 package com.easy.learn.web.controller;
 
 import com.easy.learn.web.callApi.UserCallService;
+import com.easy.learn.web.consts.UrlPath;
 import com.easy.learn.web.dto.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -16,7 +17,7 @@ public class UserController {
     public String getAllUser (Model model) {
         List<User> users = userCallService.getAllUser();
         model.addAttribute("users", users);
-        return "pages/userDetails";
+        return "index";
 
     }
 }

@@ -7,5 +7,6 @@ import java.util.List;
 public class UserDTO extends ReponseDTO<User> {
 
     public List<User> getList() {
+        return null;
     }
 }

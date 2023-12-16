@@ -14,10 +14,10 @@ public class RestTemplateConfigure {
         return new RestTemplate();
     }
 
-    @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder builder) {
-        return builder.setConnectTimeout(Duration.ofMillis(300000))
-                .setReadTimeout(Duration.ofMillis(300000))
-                .build();
-    }
+//    @Bean
+//    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+//        return builder.setConnectTimeout(Duration.ofMillis(300000))
+//                .setReadTimeout(Duration.ofMillis(300000))
+//                .build();
+//    }
 }
