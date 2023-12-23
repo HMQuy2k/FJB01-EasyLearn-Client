@@ -14,6 +14,13 @@ public interface ApiPath {
     String USER_UPDATE = API + "/user/update";
     String USER_DELETE = API + "/user/delete";
 
+//    trainer
+String TRAINER_GET_ALL = API + "/trainer/get-all";
+    String TRAINER_GET_ID = API + "/trainer/get-by-id";
+    String TRAINER_CREATE = API + "/trainer/create";
+    String TRAINER_UPDATE = API + "/trainer/get-update";
+    String TRAINER_DELETE = API + "/trainer/delete";
+
 
     // end
 }

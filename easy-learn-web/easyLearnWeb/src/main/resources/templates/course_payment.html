@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Course Payment</title>
+</head>
+<body>
+<h2>Payment for <span th:text="${course.title}"></span></h2>
+<form th:action="@{/courses/{id}/confirmPayment(id=${course.id})}" method="post">
+    <!-- Payment form fields -->
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" name="cardNumber" required>
+
+    <label for="expiryDate">Expiration Date:</label>
+    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required>
+
+
+    <button type="submit">Buy Now</button>
+</form>
+</form>
+</body>
+</html>

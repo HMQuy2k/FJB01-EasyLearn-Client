@@ -23,10 +23,11 @@ public class UserCallService {
     RestTemplate restTemplate;
 
     public List<User> getAllUser() {
+        //Init variables
         String url = apiHostUrl+ ApiPath.USER_GET_ALL;
         HttpHeaders headers = new HttpHeaders();
-        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 
+        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
         ResponseEntity<UserDTO> userResponse = restTemplate.exchange(url, HttpMethod.GET, entity, new ParameterizedTypeReference<UserDTO>() {});

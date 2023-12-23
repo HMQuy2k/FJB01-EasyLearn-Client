@@ -1,11 +1,12 @@
 <!DOCTYPE html> 
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/index.css">
-    <script src="../static/js/index.js"></script>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script th:src="@{/js/index.js}"></script>
+    <link rel="stylesheet" type = "text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
     <title>Front Page</title>
 </head>
 <body>
@@ -14,12 +15,12 @@
             <div class="div-3">
                 <img
                   loading="lazy"
-                  src="../static/img/logo 3.svg"
+                  th:src="@{/static/img/logo 3.svg}"
                   class="img"
                 />
                 <img
                   loading="lazy"
-                  src="../static/img/slogan 1.svg"
+                  th:src="@{/static/img/slogan 1.svg}"
                   class="img-2"
                 />
               </div>
@@ -31,10 +32,10 @@
           </div>
           <div class="div-9">
             <div class="div-10">
-              <button class="button" data-el="button-1">Click me!</button>
+              <button class="button" data-el="button-1">Login</button>
             </div>
             <div class="div-11">
-              <button class="button" data-el="button-2">Click me!</button>
+              <button class="button" data-el="button-2">Sign up</button>
             </div>
           </div>
         </div>
@@ -57,7 +58,7 @@
                       <video class="video" data-el="video-1">
                         <source
                           type="video/mp4"
-                          src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                          th:src="@{https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4}"
                         />
                       </video>
                       <div class="div-21"></div>
