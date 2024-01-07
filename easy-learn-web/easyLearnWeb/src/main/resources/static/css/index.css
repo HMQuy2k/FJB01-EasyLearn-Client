@@ -1,4 +1,10 @@
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
 .div {
   background-color: #f2f2f2;
   display: flex;
@@ -262,7 +268,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 1;
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -372,7 +378,7 @@
 }
 .div-29 {
   display: flex;
-  margin-top: 135px;
+  margin-top: 100px;
   justify-content: space-between;
   gap: 20px;
 }
@@ -733,3 +739,35 @@
   align-self: start;
   max-width: 100%;
 }
+/* Course-list ********************/
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  position: relative;
+}
+.course-list .item {
+  width: 25%;
+  padding: 0 15px;
+  list-style: none;
+}
+.course-list .item .inner {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.course-list .item .inner .img-box,
+.course-list .item .inner .img-box img{
+  width: 100%;
+}
+.course-list .item .inner .txt-box {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.course-list .item .inner .txt-box .rate {
+  text-align: right;
+}
+/**********************************/
+

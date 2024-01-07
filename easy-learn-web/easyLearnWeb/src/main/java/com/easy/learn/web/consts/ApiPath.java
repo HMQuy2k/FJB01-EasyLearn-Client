@@ -6,6 +6,10 @@ public interface ApiPath {
     //ping
     String PING = API + "/ping";
 
+//    security
+    String AUTHENTICATE = API + "/auth/authenticate";
+    String REGISTER = API + "/auth/register";
+
     //user
     String USER_SIGN_IN = API + "/sign-in";
     String USER_GET_ALL = API + "/user/get-all";
@@ -14,12 +18,14 @@ public interface ApiPath {
     String USER_UPDATE = API + "/user/update";
     String USER_DELETE = API + "/user/delete";
 
-//    trainer
-String TRAINER_GET_ALL = API + "/trainer/get-all";
+    //    trainer
+    String TRAINER_GET_ALL = API + "/trainer/get-all";
     String TRAINER_GET_ID = API + "/trainer/get-by-id";
     String TRAINER_CREATE = API + "/trainer/create";
     String TRAINER_UPDATE = API + "/trainer/get-update";
     String TRAINER_DELETE = API + "/trainer/delete";
+    //    lesson
+    String LESSON_GET_BY_COURSE_ID = API + "/lesson/get";
 
 
     // end

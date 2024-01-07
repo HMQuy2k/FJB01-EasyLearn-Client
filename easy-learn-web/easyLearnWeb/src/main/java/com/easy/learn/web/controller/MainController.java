@@ -2,15 +2,31 @@ package com.easy.learn.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class MainController {
-//    @GetMapping("")
-//            public String showIndexPage() {
-//        return "index";
-//    }
+    @GetMapping("")
+    public String showIndexPage() {
+        return "index";
+    }
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "login";
+    }
+    @GetMapping("/signup")
+    public String showSignUpForm() {
+        return "signup";
+    }
     @GetMapping("/basic")
     public String showBasicSite() {
         return "basic";
     }
+
+    @GetMapping("/lesson")
+    public String showLessonSite(){return "lesson";}
+    @GetMapping("/fragments")
+    public String showFragmentsSite(){return "fragments";}
+
+
  }

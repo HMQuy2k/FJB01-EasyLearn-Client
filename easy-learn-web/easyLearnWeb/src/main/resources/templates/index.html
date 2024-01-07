@@ -7,7 +7,8 @@
     <link rel="stylesheet" th:href="@{/css/index.css}">
     <script th:src="@{/js/index.js}"></script>
     <link rel="stylesheet" type = "text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
-    <title>Front Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/slick/slick.css}"/>
+  <title>Front Page</title>
 </head>
 <body>
     <div class="div">
@@ -15,12 +16,12 @@
             <div class="div-3">
                 <img
                   loading="lazy"
-                  th:src="@{/static/img/logo 3.svg}"
+                  th:src="@{/img/logo 3.svg}"
                   class="img"
                 />
                 <img
                   loading="lazy"
-                  th:src="@{/static/img/slogan 1.svg}"
+                  th:src="@{/img/slogan 1.svg}"
                   class="img-2"
                 />
               </div>
@@ -32,10 +33,14 @@
           </div>
           <div class="div-9">
             <div class="div-10">
-              <button class="button" data-el="button-1">Login</button>
+              <a href="login" th:href="@{/login}">
+                <span>Login</span>
+              </a>
             </div>
             <div class="div-11">
-              <button class="button" data-el="button-2">Sign up</button>
+              <a href="signup" th:href="@{/signup}">
+                <span>Signup</span>
+              </a>
             </div>
           </div>
         </div>
@@ -44,10 +49,9 @@
             <div class="div-14">
               <div class="column">
                 <div class="div-15">
-                  <div class="div-16">Lời chào đến trang học</div>
+                  <div class="div-16">Welcome to the future of english learning!!!</div>
                   <div class="div-17">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore
+                    Empower yourself through language - join EL today!
                   </div>
                 </div>
               </div>
@@ -57,20 +61,17 @@
                     <div class="div-20">
                       <video class="video" data-el="video-1">
                         <source
-                          type="video/mp4"
-                          th:src="@{https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4}"
+                          type="video/mp4" th:src="@{https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4}"
+
                         />
                       </video>
                       <div class="div-21"></div>
                     </div>
                   </div>
                   <div class="div-22">
-                    <div class="div-23">Giới thiệu video</div>
+                    <div class="div-23">Welcome</div>
                     <div class="div-24">
-                      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                      aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                      voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-                      ipsum quia dolor sit amet.
+                      Don't miss out on this opportunity to learn and grow. Take the first step towards language fluency and community engagement. Register now and become part of a diverse and inclusive learning experience at EasyLearn.
                     </div>
                   </div>
                 </div>
@@ -85,27 +86,27 @@
             <div class="div-29">
               <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3d1481f24e6961f705a10a644d8acd5c003dd50a27d3653004d4056d99895d7?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                th:src="@{/img/logo/Unknown-4}"
                 class="img-3"
               />
               <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3d1481f24e6961f705a10a644d8acd5c003dd50a27d3653004d4056d99895d7?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                th:src="@{/img/logo/Unknown-5}"
                 class="img-4"
               />
               <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3d1481f24e6961f705a10a644d8acd5c003dd50a27d3653004d4056d99895d7?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                th:src="@{/img/logo/Unknown-6}"
                 class="img-5"
               />
               <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3d1481f24e6961f705a10a644d8acd5c003dd50a27d3653004d4056d99895d7?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                th:src="@{/img/logo/Unknown-7}"
                 class="img-6"
               />
               <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3d1481f24e6961f705a10a644d8acd5c003dd50a27d3653004d4056d99895d7?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                th:src="@{/img/logo/Unknown-8}"
                 class="img-7"
               />
             </div>
@@ -115,7 +116,119 @@
           <div class="div-31">
             <div class="div-32">Một số khóa học hot</div>
             <div class="div-33">Hình ảnh một số khóa học nổi bật</div>
-            <div data-missing-component="BuilderCarousel"></div>
+            <div data-missing-component="BuilderCarousel">
+              <ul class="course-list" style="padding-left = 0px !important">
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Beginner</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Intermediate</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Advance</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Advance 2</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Advance 3</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Advance 4</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Advance 5</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Beginner</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Beginner</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
           </div>
         </div>
         <div class="div-34">
@@ -124,7 +237,7 @@
               Một số feedback
               <br />
             </div>
-            <div data-missing-component="BuilderCarousel"></div>
+
             <div class="div-37">Mô tả</div>
           </div>
         </div>
@@ -191,8 +304,21 @@
           </div>
         </div>
       </div>
-     
-     
-      
+    <script type="text/javascript" th:src="@{//code.jquery.com/jquery-1.11.0.min.js}"></script>
+    <script type="text/javascript" th:src="@{//code.jquery.com/jquery-migrate-1.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/vendor/slick/slick.js}"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.course-list').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: false,
+        });
+      });
+    </script>
 </body>
 </html>

@@ -5,4 +5,8 @@ public interface UrlPath {
 String GET_ALL_TRAINER = "/trainer";
 
 
+String GET_COURSE_BY_ID = "/course";
+String GET_LESSON_BY_COURSEID = "/course/lesson";
+
+
 }

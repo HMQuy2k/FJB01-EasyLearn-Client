@@ -1,373 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login</title>
+
+    <!-- Custom fonts for this template-->
+    <link th:href="@{/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css">
+    <link
+        th:href="@{https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i}"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link th:href="@{/css/sb-admin-2.css}" rel="stylesheet">
+
 </head>
-<body>
-<div class="div">
-    <div class="div-2">
-        <div class="div-3">
-            <div class="div-4">
-                <div class="column">
-                    <div class="div-5">
-                        <div class="div-6">Log In</div>
-                        <div class="div-7">PLEASE LOGIN TO CONTNUE TO YOUR ACCOUNT</div>
-                        <div class="div-8">Email</div>
-                        <div class="div-9">
-                            <div class="div-10">Password</div>
-                            <img
-                                    loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3a20d44f899fcdf0e7c4c64e76518e888bce2f8c23db09c6fac27285fc6554a?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
-                                    class="img"
-                            />
-                        </div>
-                        <div class="div-11">
-                            <div class="div-12">
-                                <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/549183928f070d070d21ecbf77154f81e6547c20585a56f2b8718e6884db6f9b?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
-                                        class="img-2"
-                                />
-                                <div class="div-13">Remember Me</div>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                    </div>
+                                    <form class="user" th:action = "@{/authenticate}" method="post">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Enter Email Address...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user"
+                                                id="exampleInputPassword" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div>
+                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </a>
+
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small" href="register.html">Create an Account!</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="div-14">Forgot Password?</div>
-                        </div>
-                        <div class="div-15">LOG IN</div>
-                        <div class="div-16">
-                            © 2023. - 2025 All Rights Reserved. EasyLearn
                         </div>
                     </div>
                 </div>
-                <div class="column-2">
-                    <div class="div-17">
-                        <div class="div-18">No Account yet?</div>
-                        <div class="div-19">Sign Up</div>
-                    </div>
-                </div>
-                <div class="column-3">
-                    <img
-                            loading="lazy"
-                            srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/29ae7245b63b9fdba4bf725c0b87512a64ff924663e5f826285574ab633e8dcf?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/29ae7245b63b9fdba4bf725c0b87512a64ff924663e5f826285574ab633e8dcf?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/29ae7245b63b9fdba4bf725c0b87512a64ff924663e5f826285574ab633e8dcf?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/29ae7245b63b9fdba4bf725c0b87512a64ff924663e5f826285574ab633e8dcf?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/29ae7245b63b9fdba4bf725c0b87512a64ff924663e5f826285574ab633e8dcf?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/29ae7245b63b9fdba4bf725c0b87512a64ff924663e5f826285574ab633e8dcf?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/29ae7245b63b9fdba4bf725c0b87512a64ff924663e5f826285574ab633e8dcf?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/29ae7245b63b9fdba4bf725c0b87512a64ff924663e5f826285574ab633e8dcf?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
-                            class="img-3"
-                    />
-                </div>
+
             </div>
+
         </div>
+
     </div>
-</div>
-<style>
-    .div {
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .div-2 {
-        background: radial-gradient(
-                141.42% 141.42% at 0% 0%,
-                #382644 0%,
-                #03161b 100%
-        );
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-    }
-    @media (max-width: 991px) {
-        .div-2 {
-            max-width: 100%;
-        }
-    }
-    .div-3 {
-        background-color: #fff;
-        width: 100%;
-        padding-left: 80px;
-    }
-    @media (max-width: 991px) {
-        .div-3 {
-            max-width: 100%;
-            padding-left: 20px;
-        }
-    }
-    .div-4 {
-        gap: 20px;
-        display: flex;
-    }
-    @media (max-width: 991px) {
-        .div-4 {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0px;
-        }
-    }
-    .column {
-        display: flex;
-        flex-direction: column;
-        line-height: normal;
-        width: 48%;
-        margin-left: 0px;
-    }
-    @media (max-width: 991px) {
-        .column {
-            width: 100%;
-        }
-    }
-    .div-5 {
-        display: flex;
-        margin-top: 200px;
-        flex-direction: column;
-        align-items: center;
-    }
-    @media (max-width: 991px) {
-        .div-5 {
-            max-width: 100%;
-            margin-top: 40px;
-        }
-    }
-    .div-6 {
-        color: #000;
-        text-align: center;
-        letter-spacing: -0.5px;
-        white-space: nowrap;
-        font: 700 25px/176% Zen Kaku Gothic Antique, -apple-system, Roboto,
-        Helvetica, sans-serif;
-    }
-    @media (max-width: 991px) {
-        .div-6 {
-            white-space: initial;
-        }
-    }
-    .div-7 {
-        color: #616161;
-        text-align: center;
-        letter-spacing: 1px;
-        margin-top: 16px;
-        white-space: nowrap;
-        font: 400 13px Zen Kaku Gothic Antique, -apple-system, Roboto, Helvetica,
-        sans-serif;
-    }
-    @media (max-width: 991px) {
-        .div-7 {
-            white-space: initial;
-        }
-    }
-    .div-8 {
-        color: #616161;
-        border: 1px solid #9e9e9e;
-        align-self: stretch;
-        margin-top: 62px;
-        justify-content: center;
-        align-items: start;
-        padding: 20px 60px 20px 16px;
-        font: 400 13px/176% Zen Kaku Gothic Antique, -apple-system, Roboto,
-        Helvetica, sans-serif;
-    }
-    @media (max-width: 991px) {
-        .div-8 {
-            max-width: 100%;
-            padding-right: 20px;
-            margin-top: 40px;
-        }
-    }
-    .div-9 {
-        border: 1px solid #9e9e9e;
-        align-self: stretch;
-        display: flex;
-        margin-top: 12px;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 17px;
-    }
-    @media (max-width: 991px) {
-        .div-9 {
-            max-width: 100%;
-            flex-wrap: wrap;
-        }
-    }
-    .div-10 {
-        color: #616161;
-        margin: auto 0;
-        font: 400 13px/176% Zen Kaku Gothic Antique, -apple-system, Roboto,
-        Helvetica, sans-serif;
-    }
-    .img {
-        aspect-ratio: 1;
-        object-fit: contain;
-        object-position: center;
-        width: 16px;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        align-self: stretch;
-        max-width: 100%;
-    }
-    .div-11 {
-        align-self: stretch;
-        display: flex;
-        margin-top: 17px;
-        width: 100%;
-        justify-content: space-between;
-        gap: 20px;
-    }
-    @media (max-width: 991px) {
-        .div-11 {
-            max-width: 100%;
-            flex-wrap: wrap;
-        }
-    }
-    .div-12 {
-        display: flex;
-        justify-content: space-between;
-        gap: 8px;
-    }
-    .img-2 {
-        aspect-ratio: 1;
-        object-fit: contain;
-        object-position: center;
-        width: 22px;
-        overflow: hidden;
-        max-width: 100%;
-    }
-    .div-13 {
-        color: #616161;
-        align-self: center;
-        flex-grow: 1;
-        white-space: nowrap;
-        margin: auto 0;
-        font: 400 13px/176% Zen Kaku Gothic Antique, -apple-system, Roboto,
-        Helvetica, sans-serif;
-    }
-    @media (max-width: 991px) {
-        .div-13 {
-            white-space: initial;
-        }
-    }
-    .div-14 {
-        color: #616161;
-        margin-top: 8px;
-        flex: 1;
-        font: 400 13px/176% Zen Kaku Gothic Antique, -apple-system, Roboto,
-        Helvetica, sans-serif;
-    }
-    .div-15 {
-        color: #fff;
-        text-align: center;
-        white-space: nowrap;
-        background-color: #4067ec;
-        align-self: stretch;
-        margin-top: 18px;
-        justify-content: center;
-        align-items: center;
-        padding: 19px 60px;
-        font: 700 13px/176% Zen Kaku Gothic Antique, -apple-system, Roboto,
-        Helvetica, sans-serif;
-    }
-    @media (max-width: 991px) {
-        .div-15 {
-            white-space: initial;
-            max-width: 100%;
-            padding: 0 20px;
-        }
-    }
-    .div-16 {
-        color: #616161;
-        text-align: right;
-        letter-spacing: 0.7px;
-        margin-top: 316px;
-        white-space: nowrap;
-        font: 300 10px Zen Kaku Gothic Antique, -apple-system, Roboto, Helvetica,
-        sans-serif;
-    }
-    @media (max-width: 991px) {
-        .div-16 {
-            margin-top: 40px;
-            white-space: initial;
-        }
-    }
-    .column-2 {
-        display: flex;
-        flex-direction: column;
-        line-height: normal;
-        width: 17%;
-        margin-left: 20px;
-    }
-    @media (max-width: 991px) {
-        .column-2 {
-            width: 100%;
-        }
-    }
-    .div-17 {
-        display: flex;
-        margin-top: 18px;
-        align-items: center;
-        gap: 18px;
-    }
-    @media (max-width: 991px) {
-        .div-17 {
-            margin-top: 40px;
-        }
-    }
-    .div-18 {
-        color: #424242;
-        text-align: center;
-        flex-grow: 1;
-        white-space: nowrap;
-        margin: auto 0;
-        font: 400 13px Zen Kaku Gothic Antique, -apple-system, Roboto, Helvetica,
-        sans-serif;
-    }
-    @media (max-width: 991px) {
-        .div-18 {
-            white-space: initial;
-        }
-    }
-    .div-19 {
-        color: #212121;
-        text-align: right;
-        letter-spacing: 0.7px;
-        white-space: nowrap;
-        border: 1px solid #212121;
-        align-self: stretch;
-        flex-grow: 1;
-        justify-content: center;
-        padding: 9px 26px 9px 16px;
-        font: 400 13px/176% Zen Kaku Gothic Antique, -apple-system, Roboto,
-        Helvetica, sans-serif;
-    }
-    @media (max-width: 991px) {
-        .div-19 {
-            white-space: initial;
-            padding-right: 20px;
-        }
-    }
-    .column-3 {
-        display: flex;
-        flex-direction: column;
-        line-height: normal;
-        width: 35%;
-        margin-left: 20px;
-    }
-    @media (max-width: 991px) {
-        .column-3 {
-            width: 100%;
-        }
-    }
-    .img-3 {
-        aspect-ratio: 0.43;
-        object-fit: contain;
-        object-position: center;
-        width: 100%;
-        overflow: hidden;
-        flex-grow: 1;
-    }
-    @media (max-width: 991px) {
-        .img-3 {
-            margin-top: 31px;
-        }
-    }
-</style>
+
+    <!-- Bootstrap core JavaScript-->
+    <script th:src="@{vendor/jquery/jquery.min.js}"></script>
+    <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script th:src="@{/vendor/jquery-easing/jquery.easing.min.js}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script th:src="@{/js/sb-admin-2.min.js}"></script>
 
 </body>
+
 </html>
