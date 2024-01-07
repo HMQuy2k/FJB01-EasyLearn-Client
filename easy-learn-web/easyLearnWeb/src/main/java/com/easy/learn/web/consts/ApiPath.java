@@ -27,6 +27,27 @@ public interface ApiPath {
     //    lesson
     String LESSON_GET_BY_COURSE_ID = API + "/lesson/get";
 
+    // course
+    String STUDENT_COURSE_GET_ALL = API + "/student-course/get-all";
+    String STUDENT_COURSE_GET_ID = API + "/student-course/get-by-id";
+    String COURSE_GET_ALL = API + "/course/get-all";
+    String COURSE_GET_ID = API + "/course/get-by-id";
+    String COURSE_CREATE = API + "/course/create";
+    String COURSE_UPDATE = API + "/course/update";
+    String COURSE_DELETE = API + "/course/delete";
+
+    //Payment
+    String PAYMENT_PROCESS = API + "/payment/process";
+    String PAYMENT_METHODS = API + "/payment/methods";
 
     // end
+
+    //ADMIN_TRAINER_COURSE_EDIT by LOC
+    String COURSE_EDIT_GET_ALL = API + "/course-edit/get-all";
+    String COURSE_EDIT_GET_ONE = API + "/course-edit/get-one";
+    String COURSE_EDIT_CREATE = API + "/course-edit/create";
+    String COURSE_EDIT_UPDATE = API + "/course-edit/update";
+    String COURSE_EDIT_DELETE = API + "/course-edit/delete";
+
+//END ADMIN_TRAINER_COURSE_EDIT
 }
