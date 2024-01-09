@@ -23,6 +23,8 @@ public class LessonController {
     @Autowired
     CourseCallService courseCallService;
 
+//
+
     @GetMapping(UrlPath.GET_LESSON_BY_COURSE_ID)
     public String showLessonPage(@PathVariable Long id, Model model, RedirectAttributes ra) {
         try {
@@ -31,10 +33,12 @@ public class LessonController {
             if(course.getId() == null) {
                 System.out.println("Course not Found!");
             }
+//            get course for video playlist title
             model.addAttribute("detailsCourse", course);
+//         get lesson playlist
             model.addAttribute("lessonList", lessonList);
-            model.addAttribute("#", "Edit Trainer (ID: "+ id +")");
-            return "student-take-course";
+
+            return "lesson";
         } catch (Exception e) {
             ra.addFlashAttribute("message", "Course lessons not found");
             return "courses";

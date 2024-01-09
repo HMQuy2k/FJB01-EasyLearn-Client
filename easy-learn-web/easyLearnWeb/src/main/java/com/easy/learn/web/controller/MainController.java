@@ -29,4 +29,7 @@ public class MainController {
     public String showFragmentsSite(){return "fragments";}
 
 
+    @GetMapping("/show/student-take-lesson")
+    public String showSTLsite(){return "student-take-lesson";}
+
  }
