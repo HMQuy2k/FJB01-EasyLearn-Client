@@ -41,6 +41,8 @@ public interface ApiPath {
     String PAYMENT_METHODS = API + "/payment/methods";
 
     // end
+//    quiz
+    String TEST_EDIT_GET_LIST_BY_LESSON_ID = API + "/test-edit/get-all-by-lessonId";
 
     //ADMIN_TRAINER_COURSE_EDIT by LOC
     String COURSE_EDIT_GET_ALL = API + "/course-edit/get-all";

@@ -403,9 +403,9 @@
                         </section>
                         <section class="video-playlist">
 
-                            <h3 class="title">Title of the video playlist</h3>
+                            <h3 th:text="${detailsCourse.title}" class="title">Title of the video playlist</h3>
 
-                            <p>10 lessons &nbsp; . &nbsp; 50m 48s</p>
+                            <p><span th:text="${#lists.size(lessonList)}"></span> lessons &nbsp; . &nbsp; 50m 48s</p>
                             <div class="videos">
                                 <!--  video inject by js-->
                             </div>
@@ -413,7 +413,7 @@
                         </section>
 
                         <input type="hidden" id="pauseSVG" th:src="@{/img/logo/pause-button-svgrepo-com.svg}">
-                        <input type="hidden" id="playSVG" th:src="@{/img/logo/play}">
+                        <input type="hidden" id="playSVG" th:src="@{/img/logo/play-button-svgrepo-com.svg}">
 
                     </main>
 
