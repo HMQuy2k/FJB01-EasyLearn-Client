@@ -335,7 +335,7 @@
                             <div class="container page__container">
                                 <h1 class="text-white" th:text="${detailsCourse.title}"></h1>
                                 <p class="lead text-white-50 measure-hero-lead mb-24pt" th:text="${detailsCourse.description}"></p>
-                                <a href="student-take-lesson.html"
+                                <a  th:href="@{'/student-course/lesson/' + ${detailsCourse.id}}"
                                    class="btn btn-white">Resume course</a>
                             </div>
                         </div>

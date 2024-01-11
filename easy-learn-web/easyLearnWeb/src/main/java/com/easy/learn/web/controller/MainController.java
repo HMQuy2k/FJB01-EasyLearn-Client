@@ -32,4 +32,13 @@ public class MainController {
     @GetMapping("/show/student-take-lesson")
     public String showSTLsite(){return "student-take-lesson";}
 
+    @GetMapping("/show/take-lesson-2")
+    public String showTL2site(){return "take-lesson-2";}
+
+
+    @GetMapping("/show/student-take-course")
+    public String showSTCsite(){return "student-take-course";}
+
+
+
  }

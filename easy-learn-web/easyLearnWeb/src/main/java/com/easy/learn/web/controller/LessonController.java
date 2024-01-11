@@ -6,7 +6,6 @@ import com.easy.learn.web.callApi.LessonCallService;
 import com.easy.learn.web.consts.UrlPath;
 import com.easy.learn.web.dto.course.Course;
 import com.easy.learn.web.dto.lesson.Lesson;
-import com.easy.learn.web.dto.trainer.Trainer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +24,21 @@ public class LessonController {
 
 //
 
+    @GetMapping(UrlPath.STUDENT_COURSE_GET_ID)
+    public String showCoursePage(@PathVariable Long id, Model model, RedirectAttributes ra) {
+        try {
+            Course course = courseCallService.getCourseById(id);
+            if(course.getId() == null) {
+                System.out.println("Course not Found!");
+            }
+//            get course for video playlist title
+            model.addAttribute("detailsCourse", course);
+            return "student-take-course";
+        } catch (Exception e) {
+            ra.addFlashAttribute("message", "Course lessons not found");
+            return "courses";
+        }
+    }
     @GetMapping(UrlPath.GET_LESSON_BY_COURSE_ID)
     public String showLessonPage(@PathVariable Long id, Model model, RedirectAttributes ra) {
         try {
@@ -38,7 +52,7 @@ public class LessonController {
 //         get lesson playlist
             model.addAttribute("lessonList", lessonList);
 
-            return "lesson";
+            return "take-lesson-2";
         } catch (Exception e) {
             ra.addFlashAttribute("message", "Course lessons not found");
             return "courses";
