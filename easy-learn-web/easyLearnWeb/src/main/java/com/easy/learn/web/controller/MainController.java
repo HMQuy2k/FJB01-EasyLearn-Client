@@ -39,6 +39,9 @@ public class MainController {
     @GetMapping("/show/student-take-course")
     public String showSTCsite(){return "student-take-course";}
 
+    @GetMapping("/show/courses")
+    public String showCsite(){return "courses";}
+
 
 
  }
