@@ -27,15 +27,15 @@ public class CourseController {
         return "courses";
     }
 
-//    @GetMapping(UrlPath.STUDENT_COURSE_GET_ID)
-//    public String getCourseById(@PathVariable Long id, Model model) {
-//        Course course = courseCallService.getCourseById(id);
-//        if(course.getId() == null) {
-//            System.out.println("Course not Found!");
-//        }
-//        model.addAttribute("detailsCourse", course);
-//        return "student-course";
-//    }
+    @GetMapping(UrlPath.STUDENT_COURSE_GET_ID)
+    public String getCourseById(@PathVariable Long id, Model model) {
+        Course course = courseCallService.getCourseById(id);
+        if(course.getId() == null) {
+            System.out.println("Course not Found!");
+        }
+        model.addAttribute("detailsCourse", course);
+        return "student-course";
+    }
 
     @GetMapping(UrlPath.PAYMENT)
     public String showPaymentPage(@PathVariable Long id, Model model) {

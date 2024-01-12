@@ -7,6 +7,7 @@ public interface UrlPath {
     String STUDENT_COURSE_GET_ID = "/student-course/{id}";
     String PAYMENT = "/student-course/payment/{id}";
     String GET_LESSON_BY_COURSE_ID = "/student-course/lesson/{id}";
+    String GET_REGISTERED_COURSE_ID = "/student-course/registered/{id}";
 
 
 }

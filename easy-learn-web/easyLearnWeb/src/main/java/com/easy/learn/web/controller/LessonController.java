@@ -24,7 +24,7 @@ public class LessonController {
 
 //
 
-    @GetMapping(UrlPath.STUDENT_COURSE_GET_ID)
+    @GetMapping(UrlPath.GET_REGISTERED_COURSE_ID)
     public String showCoursePage(@PathVariable Long id, Model model, RedirectAttributes ra) {
         try {
             Course course = courseCallService.getCourseById(id);
@@ -32,7 +32,7 @@ public class LessonController {
                 System.out.println("Course not Found!");
             }
 //            get course for video playlist title
-            model.addAttribute("detailsCourse", course);
+            model.addAttribute("registeredCourse", course);
             return "student-take-course";
         } catch (Exception e) {
             ra.addFlashAttribute("message", "Course lessons not found");

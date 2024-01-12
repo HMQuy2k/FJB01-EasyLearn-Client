@@ -333,9 +333,9 @@
                     <div class="mdk-box__content">
                         <div class="hero py-64pt text-center text-sm-left">
                             <div class="container page__container">
-                                <h1 class="text-white" th:text="${detailsCourse.title}"></h1>
-                                <p class="lead text-white-50 measure-hero-lead mb-24pt" th:text="${detailsCourse.description}"></p>
-                                <a  th:href="@{'/student-course/lesson/' + ${detailsCourse.id}}"
+                                <h1 class="text-white" th:text="${registeredCourse.title}"></h1>
+                                <p class="lead text-white-50 measure-hero-lead mb-24pt" th:text="${registeredCourse.description}"></p>
+                                <a  th:href="@{'/student-course/lesson/' + ${registeredCourse.id}}"
                                    class="btn btn-white">Resume course</a>
                             </div>
                         </div>
@@ -373,7 +373,7 @@
                                             <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
                                             <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
                                         </div>
-                                        <p class="lh-1 mb-0"><small class="text-muted" th:text="${detailsCourse.rating} + ' ratings '"></small></p>
+                                        <p class="lh-1 mb-0"><small class="text-muted" th:text="${registeredCourse.rating} + ' ratings '"></small></p>
                                     </li>
                                 </ul>
                             </div>
