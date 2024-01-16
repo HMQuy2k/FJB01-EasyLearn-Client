@@ -8,5 +8,10 @@ public interface UrlPath {
     String PAYMENT = "/student-course/payment/{id}";
     String GET_LESSON_BY_COURSE_ID = "/student-course/lesson/{id}";
 
+    String GET_REGISTERED_COURSE_BY_ID = "/reg-course/{id}";
 
+    String GET_QUESTION_LIST_BY_LESSON = "/quiz/{id}";
+
+
+    String SUBMIT_QUIZ = "/quiz/submit";
 }

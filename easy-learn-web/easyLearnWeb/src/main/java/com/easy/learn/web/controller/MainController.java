@@ -42,6 +42,8 @@ public class MainController {
     @GetMapping("/show/courses")
     public String showCsite(){return "courses";}
 
+    @GetMapping("/show/quiz")
+    public String showQsite(){return "student-take-quiz";}
 
 
  }

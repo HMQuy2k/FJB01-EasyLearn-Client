@@ -39,8 +39,6 @@
     <!-- App CSS -->
     <link type="text/css" th:href="@{/css/app.css}" rel="stylesheet">
 
-    <link rel="stylesheet" type = "text/css" th:href="@{/css/lesson.css}"/>
-
 </head>
 
 <body class="layout-sticky-subnav layout-default ">
@@ -330,98 +328,22 @@
     <!-- Header Layout Content -->
     <div class="mdk-header-layout__content page-content ">
 
-        <div class="navbar navbar-light border-0 navbar-expand-sm"
-             style="white-space: nowrap;">
-            <div class="container page__container flex-column flex-sm-row">
-                <nav class="nav navbar-nav">
-                    <div class="nav-item py-16pt py-sm-0">
-                        <div class="media flex-nowrap">
-                            <div class="media-body d-flex flex-column">
-<!--               Add this later                 th:text="${detailsCourse.getTitle()}"-->
-                                <a href="#"
-                                   th:text="${detailsCourse.title}" class="card-title">Angular Fundamentals</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <ul class="nav navbar-nav ml-sm-auto align-items-center align-items-sm-end d-none d-lg-flex">
-                    <li class="nav-item active ml-sm-16pt">
-                        <a href="#"
-                           class="nav-link">Video</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"
-                           class="nav-link">Downloads</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"
-                           class="nav-link">Notes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"
-                           class="nav-link">Discussions</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+
         <div class="bg-primary pb-lg-64pt py-32pt">
             <div class="container page__container">
-                <div th:if = "${message}" class="alert-danger text-center">[[${message}]]</div>
-
-<!--                <div class="js-player bg-primary embed-responsive embed-responsive-16by9 mb-32pt">-->
-<!--                    <div class="player embed-responsive-item">-->
-<!--                        <div class="player__content">-->
-<!--                            &lt;!&ndash;                                    <div class="player__image"&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                         style="&#45;&#45;player-image: url(public/img/illustration/player.svg)"></div>&ndash;&gt;-->
-<!--                            <a href="#"-->
-<!--                               class="player__play bg-primary">-->
-<!--                                <span class="material-icons"><i class="fa-solid fa-play"></i></span>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                        <div class="player__embed d-none">-->
-<!--                            <iframe class="embed-responsive-item"-->
-<!--                                    src="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0"-->
-<!--                                    allowfullscreen=""></iframe>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="d-flex flex-wrap align-items-end mb-16pt">-->
-<!--                    <h1 class="text-white flex m-0">Introduction to TypeScript</h1>-->
-<!--                    <p class="h1 text-white-50 font-weight-light m-0">50:13</p>-->
-<!--                </div>-->
-
-<!--                <p class="hero__lead measure-hero-lead text-white-50 mb-24pt">JavaScript is now used to power backends, create hybrid mobile applications, architect cloud solutions, design neural networks and even control robots. Enter TypeScript: a superset of JavaScript for scalable, secure, performant and feature-rich applications.</p>-->
-
-
-
-                    <main class="vid-container">
-
-                        <section class="main-video">
-                            <video th:src="@{https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4}" controls autoplay></video>
-                            <h3 th:text="${lessonList.getFirst().getTitle()}" class="title">Title of the playing video</h3>
-                            <a class="btn btn-danger  mx-auto mt-4 quiz" th:href="@{'/quiz/' + ${lessonList.getFirst().id}}" >Do Quiz</a>
-
-                        </section>
-                        <section class="video-playlist">
-
-                            <h3 th:text="${detailsCourse.title}" class="title">Title of the video playlist</h3>
-
-                            <p><span th:text="${#lists.size(lessonList)}"></span> lessons &nbsp; . &nbsp; 50m 48s</p>
-                            <div class="videos">
-                                <!--  video inject by js-->
-                            </div>
-
-                        </section>
-
-                        <input type="hidden" id="pauseSVG" th:src="@{/img/logo/pause-button-svgrepo-com.svg}">
-                        <input type="hidden" id="playSVG" th:src="@{/img/logo/play-button-svgrepo-com.svg}">
-
-                    </main>
-
-
-
-                    <!--    Footer-->
+                <!--REDIRECT FORM-->
+                <div class="card text-center">
+                    <div class="card-header">
+                        Error
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Sorry, nothing to see here!!!</h5>
+                        <p class="card-text" >It seem like this lesson does not have any quiz you need to do </p>
+                        <a th:onclick="'window.location.href=\'/student-course/lesson/' + ${result.lessonEditId} + '\''" class="btn btn-primary">Back to quiz</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Good Job !!!
+                    </div>
                 </div>
             </div>
         </div>
@@ -738,111 +660,7 @@
 </div>
 
 <!-- // END Drawer -->
-<script th:inline="javascript">
-    let data = [[${lessonList}]];
-</script>
-<script type="text/javascript">
-    const main_video = document.querySelector('.main-video video');
-    const main_video_title = document.querySelector('.main-video .title');
-    const main_video_quiz = document.querySelector('.main-video .quiz')
-    const video_playlist = document.querySelector('.video-playlist .videos');
 
-    // let data = [
-    //     {
-    //         'id': 'a1',
-    //         'title': 'manipulate text background',
-    //         'name': 'manipulate text background.mp4',
-    //         'duration': '2:47',
-    //     },
-    //     {
-    //         'id': 'a2',
-    //         'title': 'build gauge with css',
-    //         'name': 'build gauge with css.mp4',
-    //         'duration': '2:45',
-    //     },
-    //     {
-    //         'id': 'a3',
-    //         'title': '3D popup card',
-    //         'name': '3D popup card.mp4',
-    //         'duration': '24:49',
-    //     },
-    //
-    //     {
-    //         'id': 'a4',
-    //         'title': 'customize HTML5 form elements',
-    //         'name': 'customize HTML5 form elements.mp4',
-    //         'duration': '3:59',
-    //     },
-    //     {
-    //         'id': 'a5',
-    //         'title': 'custom select box',
-    //         'name': 'custom select box.mp4',
-    //         'duration': '4:25',
-    //     },
-    //     {
-    //         'id': 'a6',
-    //         'title': 'embed google map to contact form',
-    //         'name': 'embed google map to contact form.mp4',
-    //         'duration': '5:33',
-    //     },
-    //     {
-    //         'id': 'a7',
-    //         'title': 'password strength checker javascript web app',
-    //         'name': 'password strength checker javascript web app.mp4',
-    //         'duration': '0:29',
-    //     },
-    //
-    //     {
-    //         'id': 'a8',
-    //         'title': 'custom range slider',
-    //         'name': 'custom range slider.mp4',
-    //         'duration': '1:12',
-    //     },
-    //     {
-    //         'id': 'a9',
-    //         'title': 'animated shopping cart',
-    //         'name': 'animated shopping cart.mp4',
-    //         'duration': '3:38',
-    //     },
-    //
-    // ];
-
-
-    data.forEach((video, i) => {
-        let video_element = `
-                <div class="video" data-id="${video.id}">
-                    <!--path issue need to be fixed-->
-                    <img src="/static/img/logo/play-button-svgrepo-com.svg" alt="">
-                    <p>${i + 1 > 9 ? i + 1 : '0' + (i + 1)}. </p>
-                    <h3 class="title">${video.title}</h3>
-                    <p class="time">${video.duration}</p>
-                </div>
-    `;
-        video_playlist.innerHTML += video_element;
-    })
-
-    let videos = document.querySelectorAll('.video');
-    videos.forEach(selected_video => {
-        selected_video.onclick = () => {
-            let pauseIcon = document.getElementById("pauseSVG").src;
-            let playIcon = document.getElementById("playSVG").src;
-            for (all_videos of videos) {
-                all_videos.classList.remove('active');
-                selected_video.querySelector('img').src = playIcon;
-
-            }
-            selected_video.classList.add('active');
-            selected_video.querySelector('img').src = pauseIcon;
-
-
-            let match_video = data.find(video => video.id == selected_video.dataset.id);
-            main_video.src = match_video.url;
-            main_video_title.innerHTML = match_video.title;
-            main_video_quiz.href = "/quiz/" + match_video.id;
-        }
-
-    })
-</script>
 <!-- jQuery -->
 <script th:src="@{/vendor/jquery.min.js}"></script>
 
