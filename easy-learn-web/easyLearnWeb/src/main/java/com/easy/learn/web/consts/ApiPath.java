@@ -11,8 +11,9 @@ public interface ApiPath {
     String REGISTER = API + "/auth/register";
 
     //user
-    String USER_SIGN_IN = API + "/sign-in";
+    String USER_SIGN_IN = API + "/user/sign-in";
     String USER_GET_ALL = API + "/user/get-all";
+    String USER_GET_BY_USERNAME = API + "/user/get-by-user-name";
     String USER_GET_UUID = API + "/user/get-by-uuid";
     String USER_CREATE = API + "/user/create";
     String USER_UPDATE = API + "/user/update";
